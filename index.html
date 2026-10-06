@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guddzu Panjika AI</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8e7;
+      color: #333;
+    }
+
+    .header {
+      background: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #8b0000;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #answer {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3cd;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>🪔 Guddzu Panjika AI</h1>
+    <p>বাংলা পঞ্জিকা আপনার হাতের মুঠোয়</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+
+      <h2>🤖 পঞ্জিকা AI</h2>
+
+      <p>আপনার প্রশ্ন লিখুন:</p>
+
+      <input
+        id="question"
+        type="text"
+        placeholder="যেমন: আজকের তিথি কী?"
+      >
+
+      <button onclick="askPanjika()">
+        প্রশ্ন করুন
+      </button>
+
+      <div id="answer">
+        এখানে আপনার উত্তর দেখা যাবে।
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function askPanjika() {
+      const question = document.getElementById("question").value;
+
+      if (!question.trim()) {
+        document.getElementById("answer").innerText =
+          "দয়া করে একটি প্রশ্ন লিখুন।";
+        return;
+      }
+
+      document.getElementById("answer").innerText =
+        "🙏 আপনার প্রশ্ন গ্রহণ করা হয়েছে। Guddzu Panjika AI শীঘ্রই উত্তর দেবে।";
+    }
+  </script>
+
+</body>
+</html>
